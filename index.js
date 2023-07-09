@@ -20,8 +20,8 @@ app.post("/register",async (req,resp)=>{
 })  
 
 app.post("/submit",async (req,resp)=>{
-    console.log("xyz",req.body);
-    let {qn} = req.body;
+    //console.log("xyz",req.body);
+    //let {qn} = req.body;
     let subm=new submission(req.body);
     let result= await subm.save();
     resp.send(result);
